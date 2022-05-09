@@ -121,10 +121,14 @@ body {
   border-radius: 10px;
   padding: 0;
   font-size: 0;
+/*  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  flex-basis: fit-content;
+  height: 583px;*/
 }
 
 .results-carousel video {
-  margin: 0;
+  margin: 0 auto;
 }
 
 
@@ -154,4 +158,36 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+#result_video_side {
+    width: auto;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+#result_video_updown {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+}
+
+#result_video_spiral {
+    width: auto;
+    height: 390px;
+    object-fit: cover;
+}
+
+
+#result_video_zooming {
+    width: auto;
+    height: 398px;
+    object-fit: cover;
+}
+
+#failure_video {
+    width: auto;
+    height: 335px;
+    object-fit: cover;
 }

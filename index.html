@@ -49,9 +49,9 @@
           <h1 class="title is-1 publication-title">3D Moments from Near-Duplicate Photos</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.cs.cornell.edu/~qqw/">Qianqian Wang</a><sup>1,2</sup>,</span>
+              <a href="https://www.cs.cornell.edu/~qqw/">Qianqian Wang</a><sup>1,2</sup>, </span>
             <span class="author-block">
-              <a href="https://www.cs.cornell.edu/~zl548/">Zhengqi Li</a><sup>1</sup>,</span>
+              <a href="https://www.cs.cornell.edu/~zl548/">Zhengqi Li</a><sup>1</sup>, </span>
             <span class="author-block">
               <a href="http://salesin.cs.washington.edu/">David Salesin</a><sup>1</sup>,
             </span>
@@ -77,7 +77,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="static/pdfs/3d_moments.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -95,15 +95,25 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+              <span class="link-block">
+                <a href="#overview_video"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
+              <!-- Supp Link. -->
+              <span class="link-block">
+                <a href="static/pdfs/supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp</span>
+                </a>
+              </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href=""
@@ -111,7 +121,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -136,14 +146,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop height="100%">
+      <video id="teaser" autoplay muted loop width="100%">
         <source src="static/videos/teaser.mp4" type="video/mp4">
-                  <!-- <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4" -->
-                <!-- type="video/mp4"> -->
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">3D Moments</span> turns a duplicate photo pair from your phone into
-        space-time videos
+        <span class="dnerf">3D Moments</span> turns a duplicate photo pair into space-time videos
       </h2>
     </div>
   </div>
@@ -195,54 +202,119 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          We introduce 3D Moments, a new computational photography effect. As input we take a pair of near-duplicate photos, i.e., photos of moving subjects from similar viewpoints, common in people's photo collections. As output, we produce a video that smoothly interpolates the scene motion from the first photo to the second, while also producing camera motion with parallax that gives a heightened sense of 3D. To achieve this effect, we represent the scene as a pair of feature-based layered depth images augmented with scene flow. This representation enables motion interpolation along with independent control of the camera viewpoint. Our system produces photo-realistic space-time videos with motion parallax and scene dynamics, while plausibly recovering regions occluded in the original views. We conduct extensive experiments demonstrating superior performance over baselines on public benchmarks and in-the-wild photos.
+          We introduce 3D Moments, a new computational photography effect. As input we take a pair of near-duplicate photos, i.e., photos of moving subjects from similar viewpoints, common in people's photo collections. As output, we produce a video that smoothly interpolates the scene motion from the first photo to the second, while also producing camera motion with parallax that gives a heightened sense of 3D. To achieve this effect, we represent the scene as a pair of feature-based layered depth images augmented with scene flow. This representation enables motion interpolation along with independent control of the camera viewpoint. Our system produces photo-realistic space-time videos with motion parallax and scene dynamics, while plausibly recovering regions occluded in the original views. We conduct extensive experiments demonstrating superior performance over baselines on public datasets and in-the-wild photos.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-
-<div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
+<!-- <div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
 <img style='height: auto; width: 75%; object-fit: contain' src="static/images/overview.png" alt="overview_image">
-</div> 
-
-
-<!-- <div class="columns is-centered has-text-centered">
-<h2 class="title is-3"> Spiral Camera Motion</h2>
-</div>
-
-<div id="wrapper"> 
-    <video id="home1" width="200" height="300" autoplay controls muted loop> 
-        <source type="video/mp4" src="static/videos/circle_0847-0-1_cropped.mp4" /> 
-    </video>
-    <video id="home2" width="195" height="300" autoplay controls muted loop> 
-        <source type="video/mp4" src="static/videos/circle_000679-0-1_cropped.mp4" /> 
-    </video>
-    <video id="home2" width="195" height="300" autoplay controls muted loop> 
-        <source type="video/mp4" src="static/videos/circle_000679-0-1_cropped.mp4" /> 
-    </video>
-    <div class="clear"></div> 
-</div> -->
-
+</div>  -->
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <video id="replay-video"
-                 controls
-                 muted
-                 width="100%">
-            <source src="static/videos/supp_video.mp4"
-                    type="video/mp4">
-          </video>
+          <a id="overview_video"></a>
+          <iframe src="static/videos/overview_video.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
     <!--/ Paper video. -->
   </div>
+</section>
+
+ <br>
+  <br>
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3"> More Results</h2>
+</div>
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video autoplay controls muted loop id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/2558_side-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
+    </video>
+    <video  autoplay controls muted loop id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div>
+Tracking camera motion (horizontal) 
+</div>
+
+<br>
+
+<div id="wrapper" style="text-align:center;  padding: 2em 0;"> 
+    <video  autoplay controls muted loop id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/000679_up-down-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/5428_up-down-0-1.mp4" /> 
+    </video>
+
+    <video  autoplay controls muted loop id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/000350_up-down-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+
+Tracking camera motion (vertical) 
+</div>
+
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video  autoplay controls muted loop id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_000204-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_0161-0-1.mp4" /> 
+    </video>
+
+    <video  autoplay controls muted loop id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_003-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+
+Zooming-In camera motion 
+</div>
+</section>
+
+<br>
+<br>
+
+<section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> Failure Cases</h2>
+    </div>
+<br>
+    <div id="wrapper" style="text-align:center;"> 
+    <video  autoplay controls muted loop id="failure_video"> 
+        <source type="video/mp4" src="static/videos/failure1.mp4" /> 
+    </video>
+&nbsp;&nbsp;
+    <video  autoplay controls muted loop id="failure_video"> 
+        <source type="video/mp4" src="static/videos/failure2.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+Our method cannot handle motions that are too large/challenging, and doesn't work well with incorrectly estimated monocular depths.
+
+</div>
 </section>
 
 
@@ -254,7 +326,8 @@
     <pre><code>
 @inproceedings{wang2022_3dmoments,
   title     = {3D Moments from Near-Duplicate Photos},
-  author    = {Wang, Qianqian and Li, Zhengqi and Curless, Brian and Salesin, David and Snavely, Noah and Kontkanen, Janne},
+  author    = {Wang, Qianqian and Li, Zhengqi and Salesin, David and Snavely, Noah and Curless, Brian 
+               and Kontkanen, Janne},
   booktitle = {CVPR},
   year      = {2022}
 }</code></pre>
